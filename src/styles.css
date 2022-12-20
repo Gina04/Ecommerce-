@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    letter-spacing: .2px;
+    color: #2b0a3d;
+    overflow-x: hidden;
+    margin: 0;
+    font: 1rem/1.56 'Archivo',Verdana,Arial,sans-serif;
+}
+/*HEADER*/
+
+.icono-carrito{
+    color: #0070ad;
+}
+
+.icono-carrito:hover{
+    font-size: 50px;
+    transition: all .3s;
+}
+
+.navegacion-item{
+    position: relative;
+    margin: 3px;
+}
+.navegacion-item a:before{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #0070ad;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    transition: all .3s;
+}
+
+.navegacion-item a:hover::before{
+    width: 100%;
+}
+
+
+/*Hero*/
+.hero-carusel-img{
+    position: relative;
+}
+
+.hero-carusel-texto{
+    width: 520px;
+    position: absolute;
+    right: 0;
+    left: 0%;
+    top: 30%;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.hero-carusel-texto h1{
+    font-size: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero-carusel-texto h1{
+    margin: 10px;
+}
+
+.hero-carusel-texto p{
+    margin-bottom: 10px;
+}
+
+/*CATEGORIAS*/
+
+.caja-text-categoria h2{
+    font-family: 'Cookie', cursive;
+    font-size: 50px;
+    color: #111111;
+    margin-bottom: 5px;
+
+}
+
+.caja-text-categoria p{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    color: #666666;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 15px 0;
+}
+
+.caja-text-categoria a{
+    text-transform: uppercase;
+    font-size: 14px;
+    color: red;
+    font-weight: 600;
+
+}
+
+
+.mod-mujer{
+    height: 600px;
+}
+
+.mod-hombre{
+    height: 300px;
+}
+
+.mod-ninios{
+    height: 300px;
+}
+
+.mod-accesorios{
+    height: 300px;
+}
+
+/*BOTONES*/
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+.btn-action{
+    border-radius: 100px;
+    text-align: center;
+    padding: 12px;
+    color: #ffffff;
+    border: 2px solid #0070ad;
+    line-height: 18px;
+    background: 0 0;
+    font-weight: 700;
+
+}
+
+.btn-action:hover{
+    background: #0070ad;
+    color: #ffffff;
+}
+
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+ol, ul{
+	list-style: none;
+}
+
+a{
+    color: inherit;
+	text-decoration: none;
+}
+
+/*EstilosPara bootstrap*/
+
+.btn-search{
+    background-color: #0070ad;
+}
+
+.top-20{
+    top: 20%;
+}
+
+.opacity-75{
+    opacity: .8!important;
+}
