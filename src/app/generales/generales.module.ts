@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from '@angular/router';
 import { HeroComponent } from './hero/hero.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 
@@ -16,7 +17,8 @@ import { HeroComponent } from './hero/hero.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule, 
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,
