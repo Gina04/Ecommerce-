@@ -1,22 +1,24 @@
-
-<div class="card shadow-sm">
-
-        <img src="https://i.pinimg.com/originals/84/d5/33/84d533bdfea8ba2cd0af427e236eca90.jpg" width="100%"
-                    alt="Moda para mujeres">
-
-        <div class="card-body">
-            <h2 class="fs-1">{{producto?.nombreProducto}}</h2>
-            <p class="card-text">
-                {{producto?.detalleProducto}},{{producto?.precio}}
-            </p>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button"
-                    class="btn btn-sm btn-outline-secondary" (click)= "respuestaAlClick()">Agregar carrito</button>
-                </div>
-
-            </div>
-        </div>
+<div class="card shadow-sm lista-producto-card">
+  <div class="card-body lh-2">
+    <img
+      src="{{ producto?.tipoPersonalizacionConcreta }}"
+      height="150px"
+      width="100%"
+    />
+    <a [routerLink]="['detalle-producto']">
+      <h2 class="fs-1 font-weight-light">{{ producto?.nombre }}</h2>
+    </a>
+    <p class="card-text">${{ producto?.precio }}</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="btn-group">
+        <button
+          type="button"
+          class="btn btn-sm btn-primary mt-3"
+          (click)="agregarAlCarrito()"
+        >
+          Agregar al carrito
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
-
-

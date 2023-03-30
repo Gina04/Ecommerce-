@@ -1,28 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { HeaderComponent } from 'src/app/generales/header/header.component';
+import { ProductosService } from '../productos/productos.service';
 
 @Component({
   templateUrl: './listado-productos.component.html',
-  styleUrls: ['./listado-productos.component.css']
+  styleUrls: ['./listado-productos.component.css'],
 })
 //En vez de hardcodear una lista debo llamar una API/
-export class ListadoProductosComponent {
-resultados=[
-  {
-    nombreProducto: "Remera blanca básica",
-    detalleProducto:"Foto Messi, espalda",
-    precio: 2345
-  },
-  {
-    nombreProducto: "Pantalon gris",
-    detalleProducto:"Emoji smile, pierna izq",
-    precio: 4567
-  },
-  {
-    nombreProducto: "Gorra negra",
-    detalleProducto:"Frase, en vicera",
-    precio: 1000
+export class ListadoProductosComponent implements OnInit {
+  @Input() productosResultados!: any;
+
+  constructor(private productoService: ProductosService, ) {}
+
+  //aca deberia pasarle al productosREsultados o la lista completa o el resultado de la
+  //busqueda de productos
+  ngOnInit(): void {
+    this.productoService.productoPersonalizado().subscribe((producto: any) => {
+      this.productosResultados = producto;
+    });
   }
-
-]
-
 }
